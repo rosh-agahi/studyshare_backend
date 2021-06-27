@@ -32,11 +32,19 @@ Everything worked :)
 * set up github repository: https://github.com/rosh-agahi/studyshare_backend.git
 
 * in terminal, cd into folder and run
-  $ git init
-  $ git add .
-  $ git commit -m "initial commit rails api"
+  * $ git init
+  * $ git add .
+  * $ git commit -m "initial commit rails api"
 
 * add remote connection to github repository
-  $ git remote add origin https://github.com/rosh-agahi/studyshare_backend.git
-  $ git branch -M main
-  $ git push -u origin main
+  * $ git remote add origin https://github.com/rosh-agahi/studyshare_backend.git
+  * $ git branch -M main
+  * $ git push -u origin main
+
+--------------
+### branch for each of the models and features
+
+#### **$ git co -b user_model**
+rails g model User  
+removed timestamps from migration
+added username string to migration
