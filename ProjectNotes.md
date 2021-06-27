@@ -48,3 +48,8 @@ Everything worked :)
 rails g model User  
 removed timestamps from migration
 added username string to migration
+
+#### **$ git checkout -b subject_model**
+rails g model Subject  
+removed timestamps from migration
+added name string to migration
