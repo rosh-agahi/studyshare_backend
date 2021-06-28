@@ -7,6 +7,12 @@ class Api::V1::SubjectsController < ApplicationController
 
   def create
     subject = Subject.new(subject_params)
+
+    if subject.save
+      render json: subject, status: :accepted #allows us to send status codes with the fetch request
+    else
+      render json: {errors: subject.errors.full_messages}, status: :unprocessible_entitiy
+    end
   end
 
   private
