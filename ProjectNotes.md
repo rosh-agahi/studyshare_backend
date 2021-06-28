@@ -68,4 +68,14 @@ uncomment associations in user and subject models
 
 ## ActiveRecord Connection not established
 **RESOLVE**
-back on master branch to set up database
+uninstalled pg and postgresql, then reinstalled. it worked:
+
+in the studyshare_backend directory, in my terminal I ran the following:
+* $ gem uninstall pg
+* $ brew uninstall postgresql
+* $ brew install postgresql
+* $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+* $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+* $ gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+
+then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations were successfully initiated.
