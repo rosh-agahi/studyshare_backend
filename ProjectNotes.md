@@ -66,6 +66,8 @@ t.integer :subject_id
 
 uncomment associations in user and subject models
 
+-------------------------------------------------
+
 ## ActiveRecord Connection not established
 **RESOLVE**
 uninstalled pg and postgresql, then reinstalled. it worked:
@@ -79,3 +81,6 @@ in the studyshare_backend directory, in my terminal I ran the following:
 * $ gem install pg -- --with-pg-config=/usr/local/bin/pg_config
 
 then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations were successfully initiated.
+
+checked associations. we're good.
+-------------------------------------------------
