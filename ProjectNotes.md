@@ -54,6 +54,7 @@ rails g model Subject
 removed timestamps from migration
 added name string to migration
 
+
 #### **$ git checkout -b flashcard_model**
 rails g model Flashcard  
 removed timestamps from migration
@@ -84,3 +85,4 @@ then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations we
 
 checked associations. we're good.
 -------------------------------------------------
+
