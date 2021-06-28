@@ -100,3 +100,20 @@ Rails.application.routes.draw do
   end
 end
 ```
+
+generate SubjectsController
+```
+rails g controller api/v1/SubjectsController
+```
+
+define index method
+
+```
+def index
+  subjects = Subject.all
+  render json: subjects
+end
+```
+
+when dealing with views, you need instance variables for the erb
+but when it's json, you're rendering it directly, so this is easier than dealing with views. 
