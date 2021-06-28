@@ -48,3 +48,24 @@ Everything worked :)
 rails g model User  
 removed timestamps from migration
 added username string to migration
+
+#### **$ git checkout -b subject_model**
+rails g model Subject  
+removed timestamps from migration
+added name string to migration
+
+#### **$ git checkout -b flashcard_model**
+rails g model Flashcard  
+removed timestamps from migration
+
+added to migration
+t.string :term  
+t.string :definition
+t.integer :user_id
+t.integer :subject_id
+
+uncomment associations in user and subject models
+
+## ActiveRecord Connection not established
+**RESOLVE**
+back on master branch to set up database
