@@ -53,3 +53,36 @@ added username string to migration
 rails g model Subject  
 removed timestamps from migration
 added name string to migration
+
+
+#### **$ git checkout -b flashcard_model**
+rails g model Flashcard  
+removed timestamps from migration
+
+added to migration
+t.string :term  
+t.string :definition
+t.integer :user_id
+t.integer :subject_id
+
+uncomment associations in user and subject models
+
+-------------------------------------------------
+
+## ActiveRecord Connection not established
+**RESOLVE**
+uninstalled pg and postgresql, then reinstalled. it worked:
+
+in the studyshare_backend directory, in my terminal I ran the following:
+* $ gem uninstall pg
+* $ brew uninstall postgresql
+* $ brew install postgresql
+* $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+* $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+* $ gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+
+then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations were successfully initiated.
+
+checked associations. we're good.
+-------------------------------------------------
+
