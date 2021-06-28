@@ -86,3 +86,20 @@ then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations we
 checked associations. we're good.
 -------------------------------------------------
 
+## Routes, controllers and serializers
+
+Namespacing our routes because our frontend application might be hosted on a specific domain. will want all of our backend routes to be namespaced to indicate they are routes associated with the API.
+
+also for versioning (v1)
+
+**/config/routes.rb**
+```
+Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :subjects, only: [:index]
+    end
+  end
+end
+```
+
