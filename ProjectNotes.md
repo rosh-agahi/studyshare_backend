@@ -121,3 +121,17 @@ but when it's json, you're rendering it directly, so this is easier than dealing
 define create method & added it to the routes file
 
 generate FlashcardsController & populate with index and create
+
+-----------------------------
+
+gem 'fast_jsonapi'
+
+```
+rails g serializer Subject
+rails g serializer Flashcard
+```
+we don't need serializers for the javascript project but we want one... because?
+gives us a top level "data" object where the array is stored in the type.
+add the attributes to the serializer file. 
+
+need to update the controllers to use the serializers.
