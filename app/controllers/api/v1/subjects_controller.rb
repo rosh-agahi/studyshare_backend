@@ -3,7 +3,7 @@ class Api::V1::SubjectsController < ApplicationController
   def index
     subjects = Subject.all
     # render json: subjects
-    render json: SubjectSerializer.new(subject)
+    render json: SubjectSerializer.new(subjects)
   end
 
   def create

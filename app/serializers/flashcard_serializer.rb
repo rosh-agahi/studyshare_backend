@@ -1,4 +1,4 @@
 class FlashcardSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :term, :definition, :user_id, :subject_id
 end

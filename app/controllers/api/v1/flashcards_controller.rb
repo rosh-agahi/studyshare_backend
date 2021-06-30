@@ -1,9 +1,9 @@
 class Api::V1::FlashcardsController < ApplicationController
 
   def index
-    flashcard = Flashcard.all
+    flashcards = Flashcard.all
     # render json: flashcard
-    render json: FlashcardSerializer.new(flashcard)
+    render json: FlashcardSerializer.new(flashcards)
   end
 
   def create
