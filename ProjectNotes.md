@@ -54,7 +54,6 @@ rails g model Subject
 removed timestamps from migration
 added name string to migration
 
-
 #### **$ git checkout -b flashcard_model**
 rails g model Flashcard  
 removed timestamps from migration
@@ -85,7 +84,6 @@ then I ran ```rails db:create``` and ```rails db:migrate``` and my migrations we
 
 checked associations. we're good.
 -------------------------------------------------
-
 ## Routes, controllers and serializers
 
 Namespacing our routes because our frontend application might be hosted on a specific domain. will want all of our backend routes to be namespaced to indicate they are routes associated with the API.
@@ -103,7 +101,6 @@ Rails.application.routes.draw do
 end
 ```
 
-
 generate SubjectsController
 ```
 rails g controller api/v1/SubjectsController
@@ -118,11 +115,9 @@ def index
 end
 ```
 
-
 when dealing with views, you need instance variables for the erb
-but when it's json, you're rendering it directly, so this is easier than dealing with views. 
+but when it's json, you're rendering it directly, so this is easier than dealing with views.
 
 define create method & added it to the routes file
 
 generate FlashcardsController & populate with index and create
-
