@@ -115,7 +115,8 @@ def index
 end
 ```
 
-when dealing with views, you need instance variables for the erb but when it's json, you're rendering it directly, so this is easier than dealing with views.
+when dealing with views, you need instance variables for the erb
+but when it's json, you're rendering it directly, so this is easier than dealing with views.
 
 define create method & added it to the routes file
 
