@@ -23,7 +23,7 @@ Flashcard.create(
   term: "Vertex",
   definition: "the intersection point of two sides of a plane figure",
   user_id: 1,
-  subject_id: 1
+  subject_id: 2
 )
 Flashcard.create(
   term: "Double Bond",
@@ -40,18 +40,18 @@ Flashcard.create(
 Flashcard.create(
   term: "carageenans",
   definition: "extracts of marine algae (seaweeds) used in the brewing of some beers to remove materials that could potentially cause hazes in the finished beers",
-  user_id: 1,
+  user_id: 2,
   subject_id: 1
 )
 Flashcard.create(
   term: "mashing",
   definition: "the start of the brewing process, where crushed grains are mixed with water to form a porridge-like mixture call the 'mash'. Starches are transformed to sugars. Proteins and other materials are made soluble.",
-  user_id: 1,
+  user_id: 2,
   subject_id: 1
 )
 Flashcard.create(
   term: "hefeweizen",
   definition: "aka 'weissbier'; classical wheat beer of Bavaria. Wheat-based beer that is usually packaged unfiltered with plenty of yeast turbidity in the finished beer. Law requires 60-70% malted wheat, rest of the grist can be malted barley.",
-  user_id: 1,
+  user_id: 2,
   subject_id: 1
 )
