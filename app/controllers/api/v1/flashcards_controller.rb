@@ -1,18 +1,17 @@
 class Api::V1::FlashcardsController < ApplicationController
 
   def index
-    flashcards = Flashcard.all
+    @flashcards = Flashcard.all
     # render json: flashcard
-    render json: FlashcardSerializer.new(flashcards)
+    render json: FlashcardSerializer.new(@flashcards)
   end
 
   def create
-    subject = Flashcard.new(flashcard_params)
-
-    if flashcard.save
-      render json: flashcard, status: :accepted #allows us to send status codes with the fetch request
+    @flashcard.new(flashcard_params)
+    if @flashcard.save
+      render json: @flashcard, status: :accepted
     else
-      render json: {errors: flashcard.errors.full_messages}, status: :unprocessible_entitiy
+      render json: { errors: @flashcard.errors.full_messages }, status: :unprocessible_entity
     end
   end
 

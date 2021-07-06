@@ -1,18 +1,17 @@
 class Api::V1::SubjectsController < ApplicationController
 
   def index
-    subjects = Subject.all
+    @subjects = Subject.all
     # render json: subjects
-    render json: SubjectSerializer.new(subjects)
+    render json: SubjectSerializer.new(@subjects)
   end
 
   def create
-    subject = Subject.new(subject_params)
-
-    if subject.save
-      render json: subject, status: :accepted #allows us to send status codes with the fetch request
+    @subject.new(subject_params)
+    if @subject.save
+      render json: @subject, status: :accepted
     else
-      render json: {errors: subject.errors.full_messages}, status: :unprocessible_entitiy
+      render json: { errors: @subject.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
