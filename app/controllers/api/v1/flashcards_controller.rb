@@ -7,7 +7,8 @@ class Api::V1::FlashcardsController < ApplicationController
   end
 
   def create
-    @flashcard.new(flashcard_params)
+    @flashcard = Flashcard.new(flashcard_params)
+    byebug
     if @flashcard.save
       render json: @flashcard, status: :accepted
     else
@@ -18,7 +19,7 @@ class Api::V1::FlashcardsController < ApplicationController
   private
 
   def flashcard_params
-    params.require(:flashcard).permit(:term, :definition, :user_id, :subject_id)
+    params.require(:flashcard).permit(:term, :definition, :subject_id, :user_id)
   end
 
 end
