@@ -8,7 +8,7 @@ class Api::V1::FlashcardsController < ApplicationController
 
   def create
     @flashcard = Flashcard.new(flashcard_params)
-    byebug
+    # byebug
     if @flashcard.save
       render json: @flashcard, status: :accepted
     else

@@ -7,7 +7,7 @@ class Api::V1::SubjectsController < ApplicationController
   end
 
   def create
-    @subject.new(subject_params)
+    @subject = Subject.new(subject_params)
     if @subject.save
       render json: @subject, status: :accepted
     else
